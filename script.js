@@ -45,3 +45,12 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+function openSocialMediaLinks() {
+  const socialMediaLinks = document.querySelectorAll('.box a');
+  socialMediaLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open(link.href, '_blank');
+    });
+  });
+}
